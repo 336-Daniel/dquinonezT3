@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="dquinonezT3.Views.vContactos"
+             Title="vContactos">
+    <ScrollView>
+    <VerticalStackLayout
+        Padding="25"
+        Spacing="25">
+        <Label 
+            Text="Añadir contactos"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" 
+            Style="{StaticResource GlobalTitulos}"
+            />
+
+            <!--imagenes-->
+                <Image
+                        Source="https://cdn-icons-png.flaticon.com/512/3772/3772245.png"
+                        WidthRequest="150"
+                        >       
+                </Image>
+
+            <!--Picker-->
+                <Picker x:Name= "pkIdentificacion" Title="Seleccione su tipo de identificacion"
+                        SelectedIndexChanged="pkIdentificacion_SelectedIndexChanged"
+            >
+                    <Picker.Items
+            >
+                        <x:String>CI</x:String>
+                        <x:String>RUC</x:String>
+                        <x:String>Pasaporte</x:String>
+
+                    </Picker.Items>
+                    
+                </Picker>
+
+        <Entry x:Name="txtIdentificacion"
+               Placeholder="ingrese el numero de la identificacion"
+               
+               >
+            
+        </Entry>
+
+        <Entry x:Name="txtNombre"
+           Placeholder="ingrese su nombre"
+           
+           >
+        </Entry>
+
+        <Entry x:Name="txtApellido"
+           Placeholder="ingrese su apellido"
+   
+           >
+        </Entry>
+
+        <!--date picker-->
+        <DatePicker
+            x:Name="dpFecha">
+            
+        </DatePicker>
+
+        <Entry x:Name="txtCorreo"
+               Placeholder="ingrese su correo"
+               Keyboard="Email"
+   
+               >
+        </Entry>
+
+        <Entry x:Name="txtSalario"
+               Placeholder="ingrese su salario"
+               Keyboard="Numeric"
+   
+               >    
+        </Entry>
+
+        <!--grid-->
+            <Grid RowSpacing="15" ColumnSpacing="20"
+              HorizontalOptions="Center"
+              VerticalOptions="Center"> 
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                  
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    
+                </Grid.ColumnDefinitions>
+
+                    <Button x:Name="btnGuardar"
+                        Text="Guardar contacto"
+                        
+                        Clicked="btnGuardar_Clicked"
+                        Style="{StaticResource GlobalBotones}"
+                        Grid.Row="0"
+                        Grid.Column="0"
+                        >
+
+                    </Button>
+                    <Button x:Name="btnVerContactos"
+                        Text="Ver contacto"
+                        Style="{StaticResource GlobalBotones}"
+                        Clicked="btnVerContactos_Clicked"
+                        Grid.Row="0"
+                        Grid.Column="1"
+                        >       
+
+                    </Button>       
+            </Grid>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

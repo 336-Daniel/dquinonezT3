@@ -1,0 +1,28 @@
+﻿<?xml version = "1.0" encoding = "UTF-8" ?>
+<Application xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:dquinonezT3"
+             x:Class="dquinonezT3.App">
+    <Application.Resources>
+
+        <Style x:Key="GlobalBotones" TargetType="Button"
+       >
+            <Setter Property="Background" Value="YellowGreen"></Setter>
+            <Setter Property="TextColor" Value="White"></Setter>
+            <Setter Property="FontSize" Value="17"></Setter>
+
+        </Style>
+        <Style x:Key="GlobalTitulos" TargetType="Label"
+>
+            <Setter Property="TextColor" Value="Red"></Setter>
+            <Setter Property="FontSize" Value="25"></Setter>
+
+        </Style>
+        <!--<ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Resources/Styles/Colors.xaml" />
+                <ResourceDictionary Source="Resources/Styles/Styles.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>-->
+    </Application.Resources>
+</Application>

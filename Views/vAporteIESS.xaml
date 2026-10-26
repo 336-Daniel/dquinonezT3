@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="dquinonezT3.Views.vAporteIESS"
+             Title="vAporteIESS">
+
+    <!--ESTILO EXPLICITO-->
+    <ContentPage.Resources>
+        <Style x:Key="EstiloLabel" TargetType="Label">
+            <Setter Property="FontSize" Value="18"/>
+            <Setter Property="TextColor" Value="Gray"/>
+            
+        </Style>
+
+        <Style x:Key="EstiloButton" TargetType="Button">
+            <Setter Property="BackgroundColor" Value="Red"></Setter>
+            <Setter Property="TextColor" Value="White"></Setter>
+            <Setter Property="FontSize" Value="17"></Setter>
+                
+        </Style>
+    </ContentPage.Resources>
+    
+    
+    <ScrollView>
+    <VerticalStackLayout
+        Spacing="25"
+        Padding="25">
+        <Label 
+            Text="Informacion del contacto y aporte al IESS"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center"
+            Style="{StaticResource GlobalTitulos}"
+            />
+
+            <Image
+        Source="https://www.juntadebeneficencia.org.ec/wp-content/uploads/2026/07/logo_IESS_v2.png"
+        WidthRequest="200"
+        >
+            </Image>    
+
+            <Label x:Name="lblIdentificacion"
+             Style="{StaticResource EstiloLabel}"
+                   />
+
+            <Label x:Name="lblNombre"
+             Style="{StaticResource EstiloLabel}"/>
+
+            <Label x:Name="lblApellido"
+             Style="{StaticResource EstiloLabel}" />
+
+            <Label x:Name="lblFecha"
+             Style="{StaticResource EstiloLabel}"/>
+
+            <Label x:Name="lblCorreo"
+             Style="{StaticResource EstiloLabel}"/>
+
+            <Label x:Name="lblSalario"
+             Style="{StaticResource EstiloLabel}"/>
+
+            <Label x:Name="lblAporteIESS"
+             Style="{StaticResource EstiloLabel}"/>
+
+            <Button x:Name="btnExportarAArchivo"
+                    Text="Exportar a archivo de texto"
+    
+                    Clicked="btnExportarAArchivo_Clicked"
+                    Style="{StaticResource EstiloButton}"
+                    
+                    >
+
+            </Button>
+
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
